@@ -1,9 +1,11 @@
 import { ComponentPropsWithoutRef } from "react";
 import classNames from "classnames";
+import { GoSync } from "react-icons/go";
 
 type ButtonBase = ComponentPropsWithoutRef<"button"> & {
   rounded?: boolean;
   outline?: boolean;
+  loading?: boolean;
 };
 
 type ButtonProps = ButtonBase &
@@ -46,7 +48,7 @@ type ButtonProps = ButtonBase &
       }
   );
 
-function Button({ children, outline, rounded, className, ...rest }: ButtonProps) {
+function Button({ children, outline, rounded, className, loading, ...rest }: ButtonProps) {
   const isPrimary = "primary" in rest;
   const isSecondary = "secondary" in rest;
   const isSuccess = "success" in rest;
@@ -59,7 +61,8 @@ function Button({ children, outline, rounded, className, ...rest }: ButtonProps)
     delete rest.warning &&
     delete rest.danger;
 
-  const classes = classNames("flex items-center px-3 py-1.5 border [&>svg]:mr-1", className, {
+  const classes = classNames("flex items-center px-3 py-1.5 border [&>svg]:mr-1 h-8", className, {
+    "opacity-80": loading,
     "border-blue-500 bg-blue-500 text-white": isPrimary,
     "border-gray-900 bg-gray-900 text-white": isSecondary,
     "border-green-500 bg-green-500 text-white": isSuccess,
@@ -74,8 +77,8 @@ function Button({ children, outline, rounded, className, ...rest }: ButtonProps)
     "text-red-500": isDanger && outline,
   });
   return (
-    <button {...rest} className={classes}>
-      {children}
+    <button {...rest} className={classes} disabled={loading}>
+      {loading ? <GoSync className="animate-spin" /> : children}
     </button>
   );
 }
