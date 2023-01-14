@@ -8,5 +8,5 @@ export const addUser = createAsyncThunk("users/add", async () => {
     name: faker.name.fullName(),
   });
   await new Promise((r) => setTimeout(r, 1000));
-  return (await response.data) as User;
+  return response.data as User;
 });

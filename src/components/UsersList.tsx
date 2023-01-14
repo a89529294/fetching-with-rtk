@@ -2,10 +2,13 @@ import { useEffect } from "react";
 import useAsyncThunk from "../hooks/useAsyncThunk";
 import { fetchUsers, addUser } from "../store";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
+import { removeUser } from "../store/thunks/removeUser";
 import Button from "./Button";
 import Skeleton from "./Skeleton";
+import UsersListItem from "./UsersListItem";
 
 function UsersList() {
+  const dispatch = useAppDispatch();
   const [doFetchUsers, isLoadingUser, loadingUserError] = useAsyncThunk(fetchUsers);
   const [doAddUser, isCreatingUser, creatingUserError] = useAsyncThunk(addUser);
   const { data } = useAppSelector((state) => state.users);
@@ -16,18 +19,10 @@ function UsersList() {
     doFetchUsers();
   }, []);
 
-  //   if (isLoadingUser) return <Skeleton times={6} className="h-10 w-full" />;
-
-  //   if (loadingUserError) return <div>{loadingUserError.message}</div>;
-
   const renderedUsers = (() => {
     if (isLoadingUser) return <Skeleton times={6} className="h-10 w-full" />;
     if (loadingUserError) return <div>{loadingUserError.message}</div>;
-    return data.map((user) => (
-      <div key={user.id} className="mb-2 border rounded">
-        <div className="flex p-2 justify-between items-center cursor-pointer">{user.name}</div>
-      </div>
-    ));
+    return data.map((user) => <UsersListItem user={user} key={user.id} />);
   })();
 
   return (

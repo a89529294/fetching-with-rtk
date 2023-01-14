@@ -1,58 +1,12 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Myra"
+      "name": "Hubert Grady",
+      "id": 1
     },
     {
+      "name": "Kathryn Heller",
       "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "name": "Justin Schuster",
-      "id": 4
-    },
-    {
-      "name": "Betty Sanford",
-      "id": 5
-    },
-    {
-      "name": "Carol Smitham DVM",
-      "id": 6
-    },
-    {
-      "name": "Fred Prohaska IV",
-      "id": 7
-    },
-    {
-      "name": "Ross Hartmann",
-      "id": 8
-    },
-    {
-      "name": "Julie Daniel",
-      "id": 9
-    },
-    {
-      "name": "Kate Wyman",
-      "id": 10
-    },
-    {
-      "name": "Henrietta Flatley",
-      "id": 11
-    },
-    {
-      "name": "Carla Wisozk",
-      "id": 12
-    },
-    {
-      "name": "Geoffrey Howe",
-      "id": 13
-    },
-    {
-      "name": "Roman Jones",
-      "id": 14
     }
   ],
   "albums": [],

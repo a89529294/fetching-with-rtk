@@ -10,6 +10,7 @@ const store = configureStore({
 export { store };
 export * from "./thunks/fetchUsers";
 export * from "./thunks/addUser";
+export * from "./thunks/removeUser";
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
