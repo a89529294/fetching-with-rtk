@@ -8,7 +8,6 @@ import Skeleton from "./Skeleton";
 import UsersListItem from "./UsersListItem";
 
 function UsersList() {
-  const dispatch = useAppDispatch();
   const [doFetchUsers, isLoadingUser, loadingUserError] = useAsyncThunk(fetchUsers);
   const [doAddUser, isCreatingUser, creatingUserError] = useAsyncThunk(addUser);
   const { data } = useAppSelector((state) => state.users);
