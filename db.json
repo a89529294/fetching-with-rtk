@@ -14,6 +14,36 @@
       "id": 10,
       "title": "Hiking Trip",
       "userId": 1
+    },
+    {
+      "title": "bound product",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "title": "bound product",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "title": "bound product",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "title": "Computer",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "title": "Shoes",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "title": "Table",
+      "userId": 1,
+      "id": 16
     }
   ],
   "photos": []
