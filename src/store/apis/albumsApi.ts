@@ -12,7 +12,7 @@ const albumsApi = createApi({
     return {
       fetchAlbums: builder.query<Album[], User>({
         query: (user) => ({ url: "/albums", params: { userId: user.id }, method: "GET" }),
-        providesTags: ["albums"],
+        providesTags: (result, error, arg) => (result ? [{ type: "albums", id: arg.id }] : ["albums"]),
       }),
       addAlbum: builder.mutation<unknown, User>({
         query: (user) => ({
@@ -20,7 +20,7 @@ const albumsApi = createApi({
           method: "POST",
           body: { title: faker.commerce.product(), userId: user.id },
         }),
-        invalidatesTags: ["albums"],
+        invalidatesTags: (result, error, arg) => [{ type: "albums", id: arg.id }],
       }),
     };
   },
