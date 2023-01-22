@@ -11,15 +11,66 @@
   ],
   "albums": [
     {
-      "title": "Shirt",
-      "userId": 1,
-      "id": 1
+      "title": "Fish",
+      "userId": 2,
+      "id": 3
     },
     {
-      "title": "Chair",
+      "title": "Shoes",
       "userId": 1,
-      "id": 2
+      "id": 4
+    },
+    {
+      "title": "Towels",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "title": "Car",
+      "userId": 1,
+      "id": 6
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=6905",
+      "albumId": 4,
+      "id": 2
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=93073",
+      "albumId": 5,
+      "id": 3
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=9133",
+      "albumId": 4,
+      "id": 4
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=30304",
+      "albumId": 4,
+      "id": 5
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=15392",
+      "albumId": 4,
+      "id": 6
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=46714",
+      "albumId": 4,
+      "id": 7
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=88417",
+      "albumId": 4,
+      "id": 8
+    },
+    {
+      "url": "https://loremflickr.com/150/150/abstract?lock=70488",
+      "albumId": 4,
+      "id": 9
+    }
+  ]
 }
